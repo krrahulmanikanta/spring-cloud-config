@@ -1,6 +1,6 @@
 configuration:  
-  projectName: configClient
+  projectName: config-client-master
 server:
-  port: 8000
+  port: 8008
 message:
   greeting: Hello from the configuration!
