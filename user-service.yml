@@ -19,4 +19,4 @@ spring:
         enable_lazy_load_no_trans: true
 
 server:
-  port: 9006
+  port: 8006
