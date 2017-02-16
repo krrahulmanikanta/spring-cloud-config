@@ -8,7 +8,6 @@ message:
 eureka:
   instance:
     hostname: gateway
-    prefer-ip-address: true
   client:
     register-with-eureka: true
     fetch-registry: true
