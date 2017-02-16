@@ -7,7 +7,13 @@ message:
   
 eureka:
   instance:
+    leaseRenewalIntervalInSeconds: 5
+    leaseExpirationDurationInSeconds: 10
     hostname: config-client
   client:
     register-with-eureka: true
-    fetch-registry: true
+    
+spring:
+  application:
+    name: xyz
+    
