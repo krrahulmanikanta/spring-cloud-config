@@ -1,6 +1,6 @@
 configuration:  
-  projectName: configClient
+  projectName: config-client-dev
 server:
-  port: 8002
+  port: 8005
 message:
-  greeting: hi from the configuration!
+  greeting: hello from the configuration!
