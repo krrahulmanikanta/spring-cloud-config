@@ -7,8 +7,8 @@ message:
   
 eureka:
   instance:
-    leaseRenewalIntervalInSeconds: 5
-    leaseExpirationDurationInSeconds: 10
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
     hostname: config-client
   client:
     register-with-eureka: true
