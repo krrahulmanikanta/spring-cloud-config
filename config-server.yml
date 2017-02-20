@@ -20,6 +20,12 @@ spring:
 ---
 spring:
   profiles: development
+  cloud:
+    config:
+      label: dev
+      server:
+        git:
+          uri: https://github.com/CodeBlossoms/cloud-config-repo
   
 server:
   port: 7777
@@ -31,11 +37,3 @@ eureka:
   client:
     register-with-eureka: true
     fetch-registry: true
-
-spring:
-  cloud:
-    config:
-      label: dev
-      server:
-        git:
-          uri: https://github.com/CodeBlossoms/cloud-config-repo
