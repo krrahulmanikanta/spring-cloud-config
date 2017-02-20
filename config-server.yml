@@ -3,7 +3,7 @@ server:
 
 eureka:
   instance:
-    hostname: config-server
+    hostname: config-server-prod
     prefer-ip-address: true
   client:
     register-with-eureka: true
@@ -12,7 +12,30 @@ eureka:
 spring:
   cloud:
     config:
+      label: master
       server:
         git:
           uri: https://github.com/CodeBlossoms/cloud-config-repo
-          default-label: dev
+
+---
+spring:
+  profiles: development
+  
+server:
+  port: 7777
+
+eureka:
+  instance:
+    hostname: config-server-dev
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+
+spring:
+  cloud:
+    config:
+      label: dev
+      server:
+        git:
+          uri: https://github.com/CodeBlossoms/cloud-config-repo
