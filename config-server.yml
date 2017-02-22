@@ -32,6 +32,8 @@ server:
 
 eureka:
   instance:
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
     hostname: config-server-dev
     prefer-ip-address: true
   client:
