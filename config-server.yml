@@ -4,7 +4,7 @@ server:
 eureka:
   instance:
     hostname: config-server-prod
-    #prefer-ip-address: true
+    prefer-ip-address: true
   client:
     register-with-eureka: true
     fetch-registry: true
@@ -33,7 +33,7 @@ server:
 eureka:
   instance:
     hostname: config-server-dev
-    #prefer-ip-address: true
+    prefer-ip-address: true
   client:
     register-with-eureka: true
     fetch-registry: true
