@@ -12,19 +12,18 @@ eureka:
 spring:
   cloud:
     config:
-      label: master
       server:
         git:
           uri: https://github.com/CodeBlossoms/cloud-config-repo
-
+    
 ---
 spring:
   profiles: development
   cloud:
     config:
-      label: dev
       server:
         git:
+          default-label: dev
           uri: https://github.com/CodeBlossoms/cloud-config-repo
   
 server:
