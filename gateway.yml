@@ -1,0 +1,115 @@
+zuul:
+  routes:
+    user-service: /users/**
+    car-service: /cars/**      
+    car-orders:
+      path: /orders/**
+      serviceId:  rental-service     
+
+user-service:
+  ribbon:
+    eureka:
+      enabled: false  
+
+car-service:
+  ribbon:
+    eureka:
+      enabled: false
+      
+rental-service:
+  ribbon:
+    eureka:
+      enabled: false
+    
+server:
+  port: 9010
+  
+
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    enabled: true
+    sensitive: false
+    
+eureka:
+  instance:
+    hostname: gateway
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://discovery:8761/eureka/
+  
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 30000
+            
+---
+
+spring:
+  profiles: development
+  
+  
+zuul:
+  routes:
+    user-service: /users/**
+    car-service: /cars/**      
+    car-orders:
+      path: /orders/**
+      serviceId:  rental-service     
+
+user-service:
+  ribbon:
+    eureka:
+      enabled: false  
+
+car-service:
+  ribbon:
+    eureka:
+      enabled: false
+      
+rental-service:
+  ribbon:
+    eureka:
+      enabled: false
+    
+server:
+  port: 8010
+  
+
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    enabled: true
+    sensitive: false
+    
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+    hostname: gateway
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://discovery:8761/eureka/
+  
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 30000

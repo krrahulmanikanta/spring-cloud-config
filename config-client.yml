@@ -3,4 +3,17 @@ configuration:
 server:
   port: 8008
 message:
-  greeting: Hello from the configuration!
+  greeting: hello from the configuration!
+  
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+    hostname: config-client
+  client:
+    register-with-eureka: true
+    
+spring:
+  application:
+    name: xyz
+    
