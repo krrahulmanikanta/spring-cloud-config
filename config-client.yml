@@ -1,7 +1,7 @@
 configuration:  
-  projectName: config-client-dev
+  projectName: config-client-master
 server:
-  port: 8005
+  port: 8008
 message:
   greeting: hello from the configuration!
   
