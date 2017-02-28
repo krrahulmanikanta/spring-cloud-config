@@ -16,7 +16,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/CodeBlossoms/cloud-config-repo
+          uri: https://github.com/krrahulmanikanta/spring-cloud-config
     
 ---
 spring:
@@ -26,7 +26,7 @@ spring:
       server:
         git:
           default-label: dev
-          uri: https://github.com/CodeBlossoms/cloud-config-repo
+          uri: https://github.com/krrahulmanikanta/spring-cloud-config
   
 server:
   port: 7777
